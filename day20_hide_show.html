@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Show/Hide Image</title>
+  <style>
+    #myImage {
+      max-width: 300px;
+      display: block;
+      margin-top: 20px;
+    }
+
+    #toggleBtn {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hide And Show Button</h1>
+
+  <button id="toggleBtn" onclick="toggleImage()">Hide Image</button>
+
+  <img id="myImage" src="C:\Users\ANKITA CHAUDHARY\Downloads\OIP.jpg" alt="Sample Image">
+
+  <script>
+    function toggleImage() {
+      const img = document.getElementById('myImage');
+      const btn = document.getElementById('toggleBtn');
+
+      if (img.style.display === 'none') {
+        img.style.display = 'block';
+        btn.textContent = 'Hide Image';
+      } else {
+        img.style.display = 'none';
+        btn.textContent = 'Show Image';
+      }
+    }
+  </script>
+
+</body>
+</html>
